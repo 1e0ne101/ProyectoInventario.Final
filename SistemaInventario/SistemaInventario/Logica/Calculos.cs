@@ -1,6 +1,6 @@
-﻿using ProyectoFinal_inventario_winforms.Datos;
+﻿// using SistemaInventario.Datos;   // pendiente: depende de la carpeta Datos de mi compañero
 
-namespace ProyectoFinal_inventario_winforms.Logica
+namespace SistemaInventario
 {
     /// <summary>
     /// Clase que contiene los cálculos matemáticos del inventario.
