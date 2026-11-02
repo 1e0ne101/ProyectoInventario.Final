@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProyectoFinal_inventario_winforms.Logica
+namespace SistemaInventario
 {
     /// <summary>
     /// Clase que contiene métodos para validar los datos ingresados por el usuario.
