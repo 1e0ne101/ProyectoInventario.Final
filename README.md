@@ -47,17 +47,11 @@ Facilitar el control del inventario de un negocio mediante una aplicación senci
 ## Estructura del proyecto
 
 ```
-inventario-winforms/
+SistemaInventario.Final/
 ├── README.md
-├── src/
-│   ├── Presentacion/   # Formularios, controles y eventos
-│   ├── Logica/         # Validaciones y cálculos
-│   └── Datos/          # Listas y colecciones en memoria
-├── docs/
-│   └── propuesta.md
-└── evidencias/
-    ├── avance-1/
-    └── avance-2/
+├── SistemaInventario/        # Archivos del sistema y formularios
+├── .gitignore
+└── ProyectoFinal-inventario-winforms.sln
 ```
 
 ## Ejecución
