@@ -21,6 +21,7 @@ namespace SistemaInventario
         // Al abrir el formulario se muestra el resumen inicial.
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+           
             ActualizarResumen();
         }
 
@@ -65,19 +66,16 @@ namespace SistemaInventario
             int stockTotal = 0;
             lstStockBajo.Items.Clear();
 
-            // TODO: conectar con la lista de productos del grupo (carpeta Datos).
-            // Ajustar los nombres a los que use el grupo. Ejemplo de la idea:
-            //
-            // foreach (Producto p in Inventario.Productos)
-            // {
-            //     totalProductos++;
-            //     stockTotal += p.Cantidad;
-            //
-            //     if (p.Cantidad <= StockMinimo)
-            //     {
-            //         lstStockBajo.Items.Add(p.Nombre + " (" + p.Cantidad + ")");
-            //     }
-            // }
+            foreach (Producto p in Inventario.Productos)        // significa “para cada ficha de la lista, llámala p y haz lo que está entre llaves”.
+            {
+                totalProductos++;          //suma 1 al contador por cada producto
+                stockTotal += p.Cantidad;  //suma las unidades de ese producto al total
+
+                if (p.Cantidad <= StockMinimo)   // pregunta si quedan 5 o menos unidades. StockMinimo es la constante de arriba del archivo.
+                {
+                    lstStockBajo.Items.Add(p.Nombre + " (" + p.Cantidad + ")");  //agrega el nombre a la lista de stock bajo, por ejemplo Clavos (3)
+                }
+            }
 
             lblTotalProductos.Text = "Productos registrados: " + totalProductos;
             lblStockTotal.Text = "Unidades en stock: " + stockTotal;
@@ -103,7 +101,7 @@ namespace SistemaInventario
 
             if (respuesta == DialogResult.No)
             {
-                e.Cancel = true;   // cancela el cierre y la ventana sigue abierta
+                e.Cancel = true;      // cancela el cierre y la ventana sigue abierta
             }
         }
     }

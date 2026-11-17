@@ -9,6 +9,7 @@ namespace SistemaInventario
         public decimal Precio { get; set; }
         public int Cantidad { get; set; }
         public string Categoria { get; set; }
+        public string Proveedor { get; set; }
 
         public Producto(int id, string nombre, decimal precio, int cantidad, string categoria)
         {
