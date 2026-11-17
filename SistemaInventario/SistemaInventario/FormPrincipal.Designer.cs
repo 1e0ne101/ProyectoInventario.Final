@@ -44,7 +44,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Black;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(19, 27);
+            this.lblTitulo.Location = new System.Drawing.Point(262, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(276, 31);
             this.lblTitulo.TabIndex = 0;
@@ -52,9 +52,10 @@
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Location = new System.Drawing.Point(41, 103);
+            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.Location = new System.Drawing.Point(60, 110);
             this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistro.Size = new System.Drawing.Size(180, 45);
             this.btnRegistro.TabIndex = 1;
             this.btnRegistro.Text = "Registrar Productos";
             this.btnRegistro.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             // btnConsulta
             // 
-            this.btnConsulta.Location = new System.Drawing.Point(162, 103);
+            this.btnConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.Location = new System.Drawing.Point(260, 110);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(75, 23);
+            this.btnConsulta.Size = new System.Drawing.Size(180, 45);
             this.btnConsulta.TabIndex = 2;
             this.btnConsulta.Text = "Consultar Productos";
             this.btnConsulta.UseVisualStyleBackColor = true;
@@ -83,36 +85,39 @@
             // lblTotalProductos
             // 
             this.lblTotalProductos.AutoSize = true;
-            this.lblTotalProductos.Location = new System.Drawing.Point(38, 203);
+            this.lblTotalProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProductos.Location = new System.Drawing.Point(60, 220);
             this.lblTotalProductos.Name = "lblTotalProductos";
-            this.lblTotalProductos.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalProductos.Size = new System.Drawing.Size(46, 18);
             this.lblTotalProductos.TabIndex = 4;
             this.lblTotalProductos.Text = "label1";
             // 
             // lblStockTotal
             // 
             this.lblStockTotal.AutoSize = true;
-            this.lblStockTotal.Location = new System.Drawing.Point(38, 234);
+            this.lblStockTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockTotal.Location = new System.Drawing.Point(60, 250);
             this.lblStockTotal.Name = "lblStockTotal";
-            this.lblStockTotal.Size = new System.Drawing.Size(35, 13);
+            this.lblStockTotal.Size = new System.Drawing.Size(46, 18);
             this.lblStockTotal.TabIndex = 5;
             this.lblStockTotal.Text = "label2";
             // 
             // lblStockBajo
             // 
             this.lblStockBajo.AutoSize = true;
-            this.lblStockBajo.Location = new System.Drawing.Point(38, 264);
+            this.lblStockBajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockBajo.Location = new System.Drawing.Point(60, 280);
             this.lblStockBajo.Name = "lblStockBajo";
-            this.lblStockBajo.Size = new System.Drawing.Size(35, 13);
+            this.lblStockBajo.Size = new System.Drawing.Size(46, 18);
             this.lblStockBajo.TabIndex = 6;
             this.lblStockBajo.Text = "label3";
             // 
             // lstStockBajo
             // 
             this.lstStockBajo.FormattingEnabled = true;
-            this.lstStockBajo.Location = new System.Drawing.Point(202, 234);
+            this.lstStockBajo.Location = new System.Drawing.Point(60, 310);
             this.lstStockBajo.Name = "lstStockBajo";
-            this.lstStockBajo.Size = new System.Drawing.Size(120, 95);
+            this.lstStockBajo.Size = new System.Drawing.Size(300, 82);
             this.lstStockBajo.TabIndex = 7;
             // 
             // FormPrincipal
