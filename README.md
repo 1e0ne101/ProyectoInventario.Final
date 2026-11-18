@@ -12,13 +12,13 @@ Facilitar el control del inventario de un negocio mediante una aplicación senci
 
 ## Integrantes
 
-| Nombre                  |  Usuario de GitHub |
-|-------------------------|--------------------|
-| Leonel Vaca Rojas       | 1e0ne101 |
-| Monserat Aviles Ortiz   | avilesmonserat-eng  |
-| Johan Jose Ortiz Delgado| ortizdelgadojohanjose04-ai|
-| Johan Jimenez Moya      | UsuarioPendiente |
-| Anais Rojas Caballero   | anaiselenarc-collab|
+| Nombre                   | Usuario de GitHub          |
+|--------------------------|----------------------------|
+| Leonel Vaca Rojas        | 1e0ne101                   |
+| Monserat Aviles Ortiz    | avilesmonserat-eng         |
+| Johan Jose Ortiz Delgado | ortizdelgadojohanjose04-ai |
+| Johan Jimenez Moya       | UsuarioPendiente           |
+| Anais Rojas Caballero    | anaiselenarc-collab        |
 
 ## Tecnologías
 
@@ -28,46 +28,51 @@ Facilitar el control del inventario de un negocio mediante una aplicación senci
 - Git y GitHub
 - Markdown (documentación)
 
-## Funcionalidades iniciales
+## Estado de las funcionalidades
 
-> Mantener esta lista actualizada: solo incluir lo que realmente esté implementado.
+Leyenda: ✅ terminado · 🚧 en desarrollo o en revisión · ⬜ pendiente
 
-- [ ] Registrar productos (nombre, categoría, proveedor)
-- [ ] Mostrar productos en un DataGridView
-- [ ] Actualizar existencias (entradas y salidas)
-- [ ] Consultar productos por categoría o proveedor
-- [ ] Modificar información de productos
-- [ ] Eliminar productos
-- [ ] Mostrar stock disponible y alertar cuando esté bajo
+| Funcionalidad | Estado |
+|---------------|--------|
+| Pantalla principal (navegación, resumen y salida con confirmación) | ✅ |
+| Validaciones de datos (campos vacíos, números positivos) | ✅ |
+| Lista compartida de productos en memoria (`Inventario`) | 🚧 |
+| Mostrar stock disponible y alertar cuando esté bajo | 🚧 |
+| Registrar productos (nombre, categoría, proveedor) | 🚧 |
+| Mostrar productos en un DataGridView / consultar por categoría o proveedor | 🚧 |
+| Actualizar existencias (entradas y salidas) | ⬜ |
+| Modificar información de productos | ⬜ |
+| Eliminar productos | ⬜ |
 
 ## Estado del proyecto
 
-🚧 Avance 1 — en desarrollo.
+🚧 Avance 2 — en desarrollo.
 
 ## Estructura del proyecto
 
 ```
-inventario-winforms/
+ProyectoFinal-inventario-winforms/
 ├── README.md
-├── src/
-│   ├── Presentacion/   # Formularios, controles y eventos
-│   ├── Logica/         # Validaciones y cálculos
-│   └── Datos/          # Listas y colecciones en memoria
-├── docs/
-│   └── propuesta.md
-└── evidencias/
-    ├── avance-1/
-    └── avance-2/
+├── ProyectoFinal-inventario-winforms.slnx
+└── SistemaInventario/
+    ├── Producto.cs
+    ├── FormulariosProductos.cs
+    └── SistemaInventario/
+        ├── FormPrincipal.cs        # Pantalla principal
+        ├── Program.cs
+        ├── Datos/                  # Lista compartida en memoria (Inventario)
+        └── Logica/                 # Validaciones y cálculos
 ```
 
 ## Ejecución
 
-1. Clonar el repositorio: `git clone https://github.com/1e0ne101/ProyectoFinal-inventario-winforms.git`
-2. Abrir la solución (`.sln`) con Visual Studio.
+1. Clonar el repositorio: `git clone https://github.com/1e0ne101/ProyectoInventario.Final.git`
+2. Abrir `SistemaInventario/SistemaInventario.slnx` con Visual Studio.
 3. Compilar (`Ctrl + Shift + B`) y ejecutar (`F5`).
 
 ## Convenciones del equipo
 
-- Hacer `pull` antes de empezar a trabajar y `push` al terminar.
+- La rama `main` está protegida: todo cambio entra mediante un Pull Request con al menos 1 aprobación de otro integrante.
+- Cada integrante trabaja en su propia rama y hace `pull` antes de empezar.
 - Mensajes de commit descriptivos (ej. "Agregar validación de nombre de producto").
-- Cada integrante trabaja en sus formularios o módulos asignados (ver `docs/propuesta.md`).
+- Cada integrante trabaja en sus formularios o módulos asignados.
