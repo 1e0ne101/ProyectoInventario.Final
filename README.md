@@ -17,7 +17,7 @@ Facilitar el control del inventario de un negocio mediante una aplicación senci
 | Leonel Vaca Rojas        | 1e0ne101                   |
 | Monserat Aviles Ortiz    | avilesmonserat-eng         |
 | Johan Jose Ortiz Delgado | ortizdelgadojohanjose04-ai |
-| Johan Jimenez Moya       | UsuarioPendiente           |
+| Johan Jimenez Moya       | jogerin77-dev              |
 | Anais Rojas Caballero    | anaiselenarc-collab        |
 
 ## Tecnologías
