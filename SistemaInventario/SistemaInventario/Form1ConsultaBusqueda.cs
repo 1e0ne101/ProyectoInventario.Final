@@ -20,11 +20,12 @@ namespace SistemaInventario
             tablaProductos = new DataTable();
             tablaProductos.Columns.Add("Id", typeof(int));
             tablaProductos.Columns.Add("Nombre", typeof(string));
-            tablaProductos.Columns.Add("Stock", typeof(int));
+            tablaProductos.Columns.Add("Cantidad", typeof(int));
 
-            tablaProductos.Rows.Add(1, "Laptop", 10);
-            tablaProductos.Rows.Add(2, "Mouse", 25);
-            tablaProductos.Rows.Add(3, "Teclado", 15);
+            foreach (Producto p in Inventario.Productos)
+            {
+                tablaProductos.Rows.Add(p.Id, p.Nombre, p.Cantidad);
+            }
 
             vistaProductos = new DataView(tablaProductos);
             dgvResultados.DataSource = vistaProductos;

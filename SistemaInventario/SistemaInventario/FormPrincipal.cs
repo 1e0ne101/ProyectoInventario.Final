@@ -29,27 +29,20 @@ namespace SistemaInventario
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            // TODO: descomentar cuando exista el formulario de la persona 2.
-            // using (FrmRegistro frm = new FrmRegistro())
-            // {
-            //     frm.ShowDialog(this);   // abre el formulario como ventana modal
-            // }
-            MessageBox.Show("Formulario de registro pendiente.", "Información",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (FrmRegistro frm = new FrmRegistro())
+            {
+                frm.ShowDialog(this);
+            }
 
-            // Al volver, el inventario pudo cambiar: se refresca el resumen.
             ActualizarResumen();
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            // TODO: descomentar cuando exista el formulario de la persona 3.
-            // using (FrmConsulta frm = new FrmConsulta())
-            // {
-            //     frm.ShowDialog(this);
-            // }
-            MessageBox.Show("Formulario de consulta pendiente.", "Información",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            using (Form1 frm = new Form1())
+            {
+                frm.ShowDialog(this);
+            }
 
             ActualizarResumen();
         }
