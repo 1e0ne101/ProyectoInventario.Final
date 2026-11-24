@@ -52,6 +52,10 @@
       <Link>Producto.cs</Link>
     </Compile>
     <Compile Include="Datos\Inventario.cs" />
+    <Compile Include="Form1ConsultaBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1ConsultaBusqueda.Designer.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +65,7 @@
     <Compile Include="Logica\Validaciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1ConsultaBusqueda.resx" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
