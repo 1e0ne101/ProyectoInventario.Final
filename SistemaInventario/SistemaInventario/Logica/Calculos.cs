@@ -1,33 +1,36 @@
-﻿// using SistemaInventario.Datos;   // pendiente: depende de la carpeta Datos de mi compañero
-
-namespace SistemaInventario
+﻿namespace SistemaInventario
 {
     /// <summary>
     /// Clase que contiene los cálculos matemáticos del inventario.
     /// </summary>
     public static class Calculos
     {
-        // Calcula el valor total de todo el inventario
-        public static double ValorTotalInventario()
+        // Calcula el valor total de todo el inventario (precio x cantidad de cada producto)
+        public static decimal ValorTotalInventario()
         {
-            double total = 0;
-            // Notita: Esto asume que el compañero ya creó la clase Inventario con la lista Productos!
-            foreach (var p in Inventario.Productos)
+            decimal total = 0;
+
+            foreach (Producto p in Inventario.Productos)
             {
-                total += p.Precio * p.Stock;
+                total += p.Precio * p.Cantidad;
             }
+
             return total;
         }
 
-        // Cuenta cuántos productos tienen el stock bajo
+        // Cuenta cuántos productos tienen el stock bajo (cantidad igual o menor al mínimo)
         public static int ContarStockBajo(int minimo)
         {
             int contador = 0;
-            foreach (var p in Inventario.Productos)
+
+            foreach (Producto p in Inventario.Productos)
             {
-                if (p.Stock <= minimo)
+                if (p.Cantidad <= minimo)
+                {
                     contador++;
+                }
             }
+
             return contador;
         }
     }
