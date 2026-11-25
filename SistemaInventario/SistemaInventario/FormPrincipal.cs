@@ -16,12 +16,22 @@ namespace SistemaInventario
         public FormPrincipal()
         {
             InitializeComponent();
+
+            // Botón para modificar productos y registrar entradas/salidas.
+            // Se crea por código para no tener que editar el Designer.
+            Button btnGestion = new Button();
+            btnGestion.Font = btnConsulta.Font;
+            btnGestion.Text = "Modificar / Existencias";
+            btnGestion.Location = new System.Drawing.Point(460, 110);
+            btnGestion.Size = new System.Drawing.Size(180, 45);
+            btnGestion.UseVisualStyleBackColor = true;
+            btnGestion.Click += btnGestion_Click;
+            Controls.Add(btnGestion);
         }
 
         // Al abrir el formulario se muestra el resumen inicial.
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-           
             ActualizarResumen();
         }
 
@@ -31,15 +41,26 @@ namespace SistemaInventario
         {
             using (FrmRegistro frm = new FrmRegistro())
             {
-                frm.ShowDialog(this);
+                frm.ShowDialog(this);   // abre el formulario como ventana modal
             }
 
+            // Al volver, el inventario pudo cambiar: se refresca el resumen.
             ActualizarResumen();
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             using (Form1 frm = new Form1())
+            {
+                frm.ShowDialog(this);
+            }
+
+            ActualizarResumen();
+        }
+
+        private void btnGestion_Click(object sender, EventArgs e)
+        {
+            using (FrmGestion frm = new FrmGestion())
             {
                 frm.ShowDialog(this);
             }
