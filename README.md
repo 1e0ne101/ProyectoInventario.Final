@@ -4,7 +4,7 @@ Aplicación de escritorio en C# (Windows Forms) para gestionar el inventario de 
 
 ## Descripción
 
-El sistema permite administrar productos con su nombre, categoría y proveedor, registrar entradas y salidas de existencias y consultar el stock disponible, con una alerta cuando este es bajo. La información se maneja únicamente en memoria mediante listas y colecciones (no se usa base de datos).
+El sistema permite administrar productos con su nombre, categoría, proveedor, precio y cantidad, registrar entradas y salidas de existencias y consultar el stock disponible, con una alerta cuando este es bajo. La información se maneja únicamente en memoria mediante listas y colecciones (no se usa base de datos), por lo que los datos se pierden al cerrar el programa.
 
 ## Objetivo
 
@@ -36,29 +36,39 @@ Leyenda: ✅ terminado · 🚧 en desarrollo o en revisión · ⬜ pendiente
 |---------------|--------|
 | Pantalla principal (navegación, resumen y salida con confirmación) | ✅ |
 | Validaciones de datos (campos vacíos, números positivos) | ✅ |
-| Lista compartida de productos en memoria (`Inventario`) | 🚧 |
-| Mostrar stock disponible y alertar cuando esté bajo | 🚧 |
-| Registrar productos (nombre, categoría, proveedor) | 🚧 |
-| Mostrar productos en un DataGridView / consultar por categoría o proveedor | 🚧 |
-| Actualizar existencias (entradas y salidas) | ⬜ |
-| Modificar información de productos | ⬜ |
-| Eliminar productos | ⬜ |
+| Lista compartida de productos en memoria (`Inventario`) | ✅ |
+| Mostrar stock disponible y alertar cuando esté bajo | ✅ |
+| Registrar productos (nombre, categoría, proveedor, precio y cantidad) | ✅ |
+| Consultar productos en un DataGridView con búsqueda por nombre | ✅ |
+| Actualizar existencias (entradas y salidas) | ✅ |
+| Modificar información de productos | ✅ |
+| Eliminar productos | ✅ |
 
 ## Estado del proyecto
 
-🚧 Avance 2 — en desarrollo.
+✅ Avance 2 — todas las funcionalidades principales están implementadas y probadas.
+
+## Uso del programa
+
+1. **Registrar Productos:** se ingresan nombre, categoría, proveedor, precio y cantidad. El código (Id) se asigna automáticamente y los datos se validan antes de guardarse.
+2. **Consultar Productos:** muestra todos los productos en una tabla y permite buscar por nombre.
+3. **Modificar / Existencias:** al seleccionar un producto de la tabla se puede modificar su información, eliminarlo (con confirmación) o registrar entradas y salidas de existencias. Una salida no puede superar el stock disponible.
+4. **Pantalla principal:** muestra el total de productos, las unidades en stock y la lista de productos con stock bajo (5 unidades o menos).
 
 ## Estructura del proyecto
 
 ```
-ProyectoFinal-inventario-winforms/
+ProyectoInventario.Final/
 ├── README.md
 ├── ProyectoFinal-inventario-winforms.slnx
 └── SistemaInventario/
     ├── Producto.cs
-    ├── FormulariosProductos.cs
+    ├── FormulariosProductos.cs     # versión inicial en consola (no incluida en el proyecto)
     └── SistemaInventario/
         ├── FormPrincipal.cs        # Pantalla principal
+        ├── FrmRegistro.cs          # Registro de productos
+        ├── Form1ConsultaBusqueda.cs # Consulta y búsqueda
+        ├── FrmGestion.cs           # Modificar, eliminar y existencias
         ├── Program.cs
         ├── Datos/                  # Lista compartida en memoria (Inventario)
         └── Logica/                 # Validaciones y cálculos
